@@ -1,0 +1,29 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://com.personal/schema"
+           targetNamespace="http://com.personal/schema" elementFormDefault="qualified">
+
+    <xs:element name="getPersonalInfoRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="name" type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="getPersonalInfoResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="personalInfo" type="tns:personalInfo"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:complexType name="personalInfo">
+        <xs:sequence>
+            <xs:element name="firstName" type="xs:string"/>
+            <xs:element name="lastName" type="xs:string"/>
+            <xs:element name="middleName" type="xs:string"/>
+            <xs:element name="cvLink" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+
+</xs:schema>
